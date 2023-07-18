@@ -1,10 +1,8 @@
-# Telecom_Customer_Churn
-Uma empresa de telecom que fornece serviços está preocupada em reduzir a taxa de retenção de seus clientes.
-Portanto, o gerente de CRM te contratou para que você **desenvolva um modelo de predição de clientes que provavelmente irão parar de utilizar os serviços da empresa**. A ideia é alcançar o máximo de clientes que possivelmente irão entrar em churn pois a empresa quer manter o máximo de clientes com seus serviços ativos. Para executar esse projeto, a empresa te forneceu uma base de dados histórica de 7043 clientes com 21 colunas que estão listadas abaixo.
+# Telecom Customer Churn
 
 ### Índice
 
-- [Telecom\_Customer\_Churn](#telecom_customer_churn)
+- [Telecom Customer Churn](#telecom-customer-churn)
     - [Índice](#índice)
     - [Contextualização:](#contextualização)
     - [Metodologia Aplicada:](#metodologia-aplicada)
@@ -15,27 +13,18 @@ Portanto, o gerente de CRM te contratou para que você **desenvolva um modelo de
     - [Describe:](#describe)
     - [Verificando Valores Nulos:](#verificando-valores-nulos)
     - [Verificando Tipos:](#verificando-tipos)
+    - [Distribuição de Churn:](#distribuição-de-churn)
   - [Preparação dos Dados:](#preparação-dos-dados)
-    - [Criando Uma Copia do DataFrame:](#criando-uma-copia-do-dataframe)
-    - [Substituindo Valores:](#substituindo-valores)
-    - [Substituindo Valores:](#substituindo-valores-1)
+    - [Substituindo Valores Vazios '' Por Nulos:](#substituindo-valores-vazios--por-nulos)
     - [Removendo nulos:](#removendo-nulos)
-    - [Label Endcode:](#label-endcode)
     - [Convertendo Colunas:](#convertendo-colunas)
-    - [Dummy:](#dummy)
-    - [Removendo Colunas:](#removendo-colunas)
+    - [Train-test split:](#train-test-split)
+    - [Construção do pipeline de pré-processamento:](#construção-do-pipeline-de-pré-processamento)
   - [Modelagem:](#modelagem)
-    - [Variáveis:](#variáveis-1)
-    - [Regressão Logística:](#regressão-logística)
-    - [Regressão Logística - Desempenho:](#regressão-logística---desempenho)
-    - [Regressão Logística - GridSearchCV:](#regressão-logística---gridsearchcv)
-    - [Regressão Logística Tunning:](#regressão-logística-tunning)
-    - [Regressão Logística Tunning - Desempenho:](#regressão-logística-tunning---desempenho)
-    - [Random Forest:](#random-forest)
-    - [Random Forest - Desempenho:](#random-forest---desempenho)
-    - [Random Forest - GridSearchCV:](#random-forest---gridsearchcv)
-    - [Random Forest Tunning:](#random-forest-tunning)
-    - [Random Forest Tunning - Desempenho:](#random-forest-tunning---desempenho)
+    - [Sem Balanceamento:](#sem-balanceamento)
+    - [Random OverSampler:](#random-oversampler)
+    - [Smote:](#smote)
+    - [Adasyn:](#adasyn)
   - [Avaliação:](#avaliação)
   - [Implantação:](#implantação)
   - [Pré-requisitos para executar o projeto:](#pré-requisitos-para-executar-o-projeto)
@@ -55,7 +44,7 @@ A análise foi realizada utilizando o modelo CRISP-DM, o CRISP-DM (Cross Industr
 O modelo CRISP-DM é uma abordagem sistemática e estruturada para a mineração de dados que ajuda as empresas a desenvolver soluções de mineração de dados de maneira eficiente e eficaz, reduzindo o tempo e os custos do projeto.
 
 ## Entendimento do Negócio:
-Utilize um modelo de classificação para mapear qual o perfil de usuários tem mais chance de deixar sua plataforma de streaming.
+Utilize um modelo de classificação para mapear qual o perfil de usuários tem mais chance parar de utilizar os serviços da empresa.
 Compreender quem é o perfil que está aumentando o churn do seu negócio é essencial para tomar ações que reduzam essas perdas, seja alterando critérios na venda ou modificando o produto.
 
 ## Entendimento dos Dados:
@@ -96,70 +85,62 @@ Compreender quem é o perfil que está aumentando o churn do seu negócio é ess
 ### Verificando Tipos:
 ![Data Frame](/core/img/tipos.png)
 
+### Distribuição de Churn:
+![Data Frame](/core/img/distribuição.png)
+
 ## Preparação dos Dados:
-### Criando Uma Copia do DataFrame:
-![Data Frame](/core/img/copy.png)
 
-### Substituindo Valores:
-![Data Frame](/core/img/substituindo_valores.png)
-
-### Substituindo Valores:
+### Substituindo Valores Vazios '' Por Nulos:
 ![Data Frame](/core/img/substituindo_valores.png)
 
 ### Removendo nulos:
 ![Data Frame](/core/img/removendo_nulos.png)
 
-### Label Endcode:
-![Data Frame](/core/img/label_endcode.png)
-
 ### Convertendo Colunas:
 ![Data Frame](/core/img/convertendo_colunas.png)
 
-### Dummy:
-![Data Frame](/core/img/dummy.png)
+### Train-test split:
+![Data Frame](/core/img/train_test_split.png)
 
-### Removendo Colunas:
-![Data Frame](/core/img/removendo_colunas.png)
+### Construção do pipeline de pré-processamento:
+![Data Frame](/core/img/pre_processamento.png)
 
 
 ## Modelagem:
-### Variáveis:
-![Data Frame](/core/img/x_e_y.png)
+### Sem Balanceamento:
+![Data Frame](/core/img/sem_balanceamento.png)
 
-### Regressão Logística:
-![Data Frame](/core/img/regressão_logística.png)
+### Random OverSampler:
+![Data Frame](/core/img/random_over_sampler.png)
 
-### Regressão Logística - Desempenho:
-![Data Frame](/core/img/regressão_logística_desempenho.png)
+### Smote:
+![Data Frame](/core/img/smote.png)
 
-### Regressão Logística - GridSearchCV:
-![Data Frame](/core/img/regressão_logística_gridsearchcv.png)
-
-### Regressão Logística Tunning:
-![Data Frame](/core/img/regressão_logística_tunning.png)
-
-### Regressão Logística Tunning - Desempenho:
-![Data Frame](/core/img/regressão_logística_tunning_desempenho.png)
-
-### Random Forest:
-![Data Frame](/core/img/random_forest.png)
-
-### Random Forest - Desempenho:
-![Data Frame](/core/img/random_forest_desempenho.png)
-
-### Random Forest - GridSearchCV:
-![Data Frame](/core/img/random_forest_gridsearchcv.png)
-
-### Random Forest Tunning:
-![Data Frame](/core/img/random_forest_tunning.png)
-
-### Random Forest Tunning - Desempenho:
-![Data Frame](/core/img/random_forest_tunning_desempenho.png)
+### Adasyn:
+![Data Frame](/core/img/adasyn.png)
 
 ## Avaliação:
-Com o objetivo de criar este estudo, buscamos identificar o perfil dos usuários que têm maior probabilidade de deixar a plataforma de streaming. Para isso, realizamos uma análise detalhada em busca de padrões entre os diferentes perfis de usuários que abandonam a plataforma, a fim de identificar possíveis casos de churn antes que ocorram. Dessa forma, buscamos reter esses clientes por mais tempo em nossa plataforma.
+Nosso objetivo é reduzir a taxa de cancelamento (churn), então testamos vários modelos de classificação para prever o perfil dos clientes propensos a cancelar ou não. Também utilizamos técnicas de balanceamento de dados, como Random Oversampling, SMOTE, ADASYN e Random Undersampling.
 
-Utilizamos dois modelos de machine learning para identificar os perfis dos clientes: Regressão Logística e Random Forest. Durante a comparação entre os dois modelos, constatamos que o Random Forest obteve um desempenho superior, além de se adequar melhor à resolução do nosso problema.
+Criamos um pipeline de pré-processamento e um pipeline para cada modelo e técnica de balanceamento. No final, o pipeline de regressão logística em conjunto com a técnica de oversampling aleatório apresentou o melhor desempenho, com um F1 de 0.64.
+
+No entanto, esta é a versão 0.1.0 do projeto, e há vários pontos que serão atualizados em versões futuras. Com isso em mente, listamos algumas possíveis atualizações que podem ser feitas no futuro.
+
+- **Exploração dos dados:** Analise os dados com mais detalhes para entender melhor as características dos clientes churn e identificar padrões ou insights relevantes. Isso pode ajudar a identificar variáveis-chave que afetam o churn e a orientar a seleção de recursos e técnicas de pré-processamento mais adequadas.
+
+- **Engenharia de recursos:** Considere a possibilidade de criar novas variáveis ou transformar as existentes para capturar melhor a informação relevante para a previsão do churn. Isso pode envolver a criação de variáveis agregadas, rácios ou categorizações mais refinadas.
+
+- **Seleção de recursos:** Utilize técnicas de seleção de recursos para identificar as variáveis mais relevantes para o problema de churn. Isso pode ajudar a simplificar o modelo, reduzir o ruído e melhorar a generalização.
+
+- **Experimentação com diferentes modelos:** Embora a regressão logística tenha apresentado bom desempenho, vale a pena explorar outros algoritmos de classificação, como árvores de decisão, random forest, gradient boosting, SVM, entre outros. Cada algoritmo tem suas próprias características e pode se adaptar melhor ao seu conjunto de dados específico.
+
+- **Ajuste de hiperparâmetros:** Experimente ajustar os hiperparâmetros do seu modelo para otimizar o desempenho. O ajuste correto dos hiperparâmetros pode melhorar significativamente o desempenho do modelo.
+
+- **Validação cruzada:** Utilize técnicas de validação cruzada para avaliar o desempenho do modelo de forma mais robusta. Isso envolve dividir o conjunto de dados em conjuntos de treinamento e teste em várias iterações para obter estimativas mais confiáveis do desempenho do modelo.
+
+- **Outras métricas de avaliação:** Além do F1-score, considere outras métricas de avaliação, como precisão, recall, matriz de confusão, curva ROC e área sob a curva (AUC-ROC). Essas métricas podem fornecer uma visão mais completa do desempenho do modelo em diferentes aspectos.
+
+- **Validação externa:** Se possível, valide o desempenho do seu modelo em um conjunto de dados externo ou em um ambiente de produção. Isso ajuda a verificar se o desempenho observado é generalizável e se o modelo está realmente fornecendo insights úteis para a empresa.
 
 ## Implantação:
 Iniciando a etapa de implementação do modelo em produção.
@@ -183,7 +164,7 @@ conda activate .tcc
 
 Instale as dependências:
 ```
-conda install --file core/requirements.txt
+pip install -r core/requirements.txt
 ```
 
 ---
