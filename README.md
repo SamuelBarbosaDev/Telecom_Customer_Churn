@@ -120,27 +120,27 @@ Compreender quem é o perfil que está aumentando o churn do seu negócio é ess
 ![Data Frame](/core/img/adasyn.png)
 
 ## Avaliação:
-Nosso objetivo é reduzir a taxa de cancelamento (churn), então testamos vários modelos de classificação para prever o perfil dos clientes propensos a cancelar ou não. Também utilizamos técnicas de balanceamento de dados, como Random Oversampling, SMOTE, ADASYN e Random Undersampling.
+Nosso objetivo é reduzir a taxa de cancelamento (churn), portanto, testamos vários modelos de classificação para prever o perfil dos clientes propensos a cancelar ou não. Também utilizamos técnicas de balanceamento de dados, como Random Oversampling, SMOTE, ADASYN e Random Undersampling.
 
 Criamos um pipeline de pré-processamento e um pipeline para cada modelo e técnica de balanceamento. No final, o pipeline de regressão logística em conjunto com a técnica de oversampling aleatório apresentou o melhor desempenho, com um F1 de 0.64.
 
-No entanto, esta é a versão 0.1.0 do projeto, e há vários pontos que serão atualizados em versões futuras. Com isso em mente, listamos algumas possíveis atualizações que podem ser feitas no futuro.
+No entanto, esta é a versão 0.1.0 do projeto, e há vários pontos que serão atualizados em versões futuras. Com isso em mente, listamos algumas possíveis atualizações que podem ser feitas no futuro:
 
-- **Exploração dos dados:** Analise os dados com mais detalhes para entender melhor as características dos clientes churn e identificar padrões ou insights relevantes. Isso pode ajudar a identificar variáveis-chave que afetam o churn e a orientar a seleção de recursos e técnicas de pré-processamento mais adequadas.
+- **Exploração dos dados:** Analisar os dados com mais detalhes para entender melhor as características dos clientes churn e identificar padrões ou insights relevantes. Isso pode ajudar a identificar variáveis-chave que afetam o churn e a orientar a seleção de recursos e técnicas de pré-processamento mais adequadas.
 
-- **Engenharia de recursos:** Considere a possibilidade de criar novas variáveis ou transformar as existentes para capturar melhor a informação relevante para a previsão do churn. Isso pode envolver a criação de variáveis agregadas, rácios ou categorizações mais refinadas.
+- **Engenharia de recursos:** Considerar a possibilidade de criar novas variáveis ou transformar as existentes para capturar melhor a informação relevante para a previsão do churn. Isso pode envolver a criação de variáveis agregadas, razões ou categorizações mais refinadas.
 
-- **Seleção de recursos:** Utilize técnicas de seleção de recursos para identificar as variáveis mais relevantes para o problema de churn. Isso pode ajudar a simplificar o modelo, reduzir o ruído e melhorar a generalização.
+- **Seleção de recursos:** Utilizar técnicas de seleção de recursos para identificar as variáveis mais relevantes para o problema de churn. Isso pode ajudar a simplificar o modelo, reduzir o ruído e melhorar a generalização.
 
 - **Experimentação com diferentes modelos:** Embora a regressão logística tenha apresentado bom desempenho, vale a pena explorar outros algoritmos de classificação, como árvores de decisão, random forest, gradient boosting, SVM, entre outros. Cada algoritmo tem suas próprias características e pode se adaptar melhor ao seu conjunto de dados específico.
 
-- **Ajuste de hiperparâmetros:** Experimente ajustar os hiperparâmetros do seu modelo para otimizar o desempenho. O ajuste correto dos hiperparâmetros pode melhorar significativamente o desempenho do modelo.
+- **Ajuste de hiperparâmetros:** Experimentar ajustar os hiperparâmetros do seu modelo para otimizar o desempenho. O ajuste correto dos hiperparâmetros pode melhorar significativamente o desempenho do modelo.
 
-- **Validação cruzada:** Utilize técnicas de validação cruzada para avaliar o desempenho do modelo de forma mais robusta. Isso envolve dividir o conjunto de dados em conjuntos de treinamento e teste em várias iterações para obter estimativas mais confiáveis do desempenho do modelo.
+- **Validação cruzada:** Utilizar técnicas de validação cruzada para avaliar o desempenho do modelo de forma mais robusta. Isso envolve dividir o conjunto de dados em conjuntos de treinamento e teste em várias iterações para obter estimativas mais confiáveis do desempenho do modelo.
 
-- **Outras métricas de avaliação:** Além do F1-score, considere outras métricas de avaliação, como precisão, recall, matriz de confusão, curva ROC e área sob a curva (AUC-ROC). Essas métricas podem fornecer uma visão mais completa do desempenho do modelo em diferentes aspectos.
+- **Outras métricas de avaliação:** Além do F1-score, considerar outras métricas de avaliação, como precisão, recall, matriz de confusão, curva ROC e área sob a curva (AUC-ROC). Essas métricas podem fornecer uma visão mais completa do desempenho do modelo em diferentes aspectos.
 
-- **Validação externa:** Se possível, valide o desempenho do seu modelo em um conjunto de dados externo ou em um ambiente de produção. Isso ajuda a verificar se o desempenho observado é generalizável e se o modelo está realmente fornecendo insights úteis para a empresa.
+- **Validação externa:** Se possível, validar o desempenho do seu modelo em um conjunto de dados externo ou em um ambiente de produção. Isso ajuda a verificar se o desempenho observado é generalizável e se o modelo está realmente fornecendo insights úteis para a empresa.
 
 ## Implantação:
 Iniciando a etapa de implementação do modelo em produção.
