@@ -21,7 +21,7 @@ et-xmlfile==1.1.0
 executing==1.2.0
 fastjsonschema==2.16.2
 flake8==6.0.0
-fonttools==4.38.0
+fonttools==4.61.0
 fqdn==1.5.1
 htmlmin==0.1.12
 idna==3.4
